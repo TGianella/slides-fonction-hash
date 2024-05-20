@@ -1,0 +1,18 @@
+---
+import Slide from "../../components/Slide.astro";
+import Avatar from "../../assets/avatar_pour_les_nuls.png";
+---
+
+<Slide withTitle withSubtitle>
+	<div style="
+		position: relative;
+		top: -9vh;
+		font-family: 'Comic Sans MS';
+		width: 50vw;
+		z-index: 10;
+	">
+		<h2 style="color: white; font-size: 1.42em;">Dessine-moi un mot de passe</h2>
+		<p style="color: yellow; font-size: 1.1em">ou le hachage cryptographique pour les nuls</p>
+	</div>
+	<img src={Avatar.src} />
+</Slide>

@@ -6,11 +6,19 @@ interface Props {
    * default: true
    */
   animate?: boolean;
+	withTitle?: string;
+	withSubtitle?: string;
 }
 
-const { animate = true } = Astro.props;
+const { animate = true, withTitle = false, withSubtitle = false } = Astro.props;
 ---
 
-<section data-auto-animate={animate}>
+<section
+	data-auto-animate={animate}
+	data-background-gradient={
+		withTitle && withSubtitle ? "linear-gradient(178deg, black, black 40%, yellow 40%, yellow)" :
+			withTitle ? "linear-gradient(178deg, black, black 22%, yellow 22%, yellow)" : ''
+	}
+>
   <slot />
 </section>

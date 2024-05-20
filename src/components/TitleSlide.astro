@@ -1,0 +1,30 @@
+---
+import Slide from "./Slide.astro";
+
+interface Props {
+	oneSlide: boolean;
+	title: string;
+	spacing: number;
+	}
+
+const { title, oneSlide= false, spacing = 10} = Astro.props;
+---
+
+{!oneSlide ?
+	<Slide>
+		<h2>{title}</h2>
+	</Slide>
+	: null
+}
+
+<Slide withTitle>
+	<div style=`
+		position: relative;
+		top: -${spacing}vh;
+		width: 50vw;
+		z-index: 10;
+	`>
+		<h2 style="color: white; font-size: 1.42em;">{title}</h2>
+	</div>
+	<slot />
+</Slide>

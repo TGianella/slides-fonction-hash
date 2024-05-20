@@ -1,14 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Title from "../slides/Title.astro";
-import WhyAstro from "../slides/WhyAstro.astro";
+import Title from "../slides/intro/Title.astro";
+import Accroche from "../slides/intro/Accroche.astro";
+import HashFunctionsIntro from "../slides/intro/HashFunctionsIntro.astro";
+import HashFunctionsExemple from "../slides/intro/HashFunctionsExemple.astro";
+import HashApplications from "../slides/intro/HashApplications.astro";
+import IntroGameOfLife from "../slides/intro/IntroGameOfLife.astro";
+import GameOfLifeFunction from "../slides/intro/GameOfLifeFunction.astro";
+import Disclaimer from "../slides/1_hash_functions_demo/Disclaimer.astro";
+import PasswordStorage from "../slides/1_hash_functions_demo/PasswordStorage.astro";
+import EncryptionHashing from "../slides/1_hash_functions_demo/EncryptionHashing.astro";
+import HashSecurity from "../slides/1_hash_functions_demo/HashSecurity.astro";
+import Demo from "../slides/1_hash_functions_demo/Demo.astro";
+import DesirableProperties from "../slides/1_hash_functions_demo/DesirableProperties.astro";
+import Bias from "../slides/1_hash_functions_demo/Bias.astro";
 ---
 
 <Layout title="My Awesome Talk Title">
   <main class="reveal">
     <div class="slides">
       <Title />
-      <WhyAstro />
+			<Accroche />
+			<HashFunctionsIntro />
+			<HashFunctionsExemple />
+			<HashApplications />
+			<IntroGameOfLife />
+			<GameOfLifeFunction />
+			<Disclaimer />
+			<PasswordStorage />
+			<EncryptionHashing />
+			<HashSecurity />
+			<Demo />
+			<DesirableProperties />
+			<Bias />
       <!-- Put your slides here -->
     </div>
   </main>
@@ -17,6 +41,6 @@ import WhyAstro from "../slides/WhyAstro.astro";
 <style lang="scss">
   // Sass is installed by default, you can change if you prefer Stylus or Less
   main {
-    background: linear-gradient(#133055, #0c1a2a);
+    background: yellow;
   }
 </style>
