@@ -4,7 +4,6 @@ import Title from "../slides/intro/Title.astro";
 import Accroche from "../slides/intro/Accroche.astro";
 import HashFunctionsIntro from "../slides/intro/HashFunctionsIntro.astro";
 import HashFunctionsExemple from "../slides/intro/HashFunctionsExemple.astro";
-import HashApplications from "../slides/intro/HashApplications.astro";
 import IntroGameOfLife from "../slides/intro/IntroGameOfLife.astro";
 import GameOfLifeFunction from "../slides/intro/GameOfLifeFunction.astro";
 import Disclaimer from "../slides/1_hash_functions_demo/Disclaimer.astro";
@@ -14,6 +13,12 @@ import HashSecurity from "../slides/1_hash_functions_demo/HashSecurity.astro";
 import Demo from "../slides/1_hash_functions_demo/Demo.astro";
 import DesirableProperties from "../slides/1_hash_functions_demo/DesirableProperties.astro";
 import Bias from "../slides/1_hash_functions_demo/Bias.astro";
+import WhyHashing from "../slides/intro/WhyHashing.astro";
+import Fingerprinting from "../slides/intro/Fingerprinting.astro";
+import Rules from "../slides/intro/Rules.astro";
+import GameOfLifeFullscreen from "../slides/intro/GameOfLifeFullscreen.astro";
+import Dessin from "../slides/intro/Dessin.astro";
+import FunctionPresentation from "../slides/1_hash_functions_demo/FunctionPresentation.astro";
 ---
 
 <Layout title="My Awesome Talk Title">
@@ -22,14 +27,17 @@ import Bias from "../slides/1_hash_functions_demo/Bias.astro";
       <Title />
 			<Accroche />
 			<HashFunctionsIntro />
+			<HashSecurity />
 			<HashFunctionsExemple />
-			<HashApplications />
+			<WhyHashing />
+			<Fingerprinting />
+			<Dessin />
 			<IntroGameOfLife />
+			<Rules />
+			<GameOfLifeFullscreen />
 			<GameOfLifeFunction />
 			<Disclaimer />
-			<PasswordStorage />
-			<EncryptionHashing />
-			<HashSecurity />
+			<FunctionPresentation />
 			<Demo />
 			<DesirableProperties />
 			<Bias />

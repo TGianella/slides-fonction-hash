@@ -4,10 +4,11 @@ import Slide from "./Slide.astro";
 interface Props {
 	oneSlide: boolean;
 	title: string;
+	secondTitle: string;
 	spacing: number;
 	}
 
-const { title, oneSlide= false, spacing = 10} = Astro.props;
+const { title, oneSlide= false, spacing = 10, secondTitle} = Astro.props;
 ---
 
 {!oneSlide ?
@@ -24,7 +25,7 @@ const { title, oneSlide= false, spacing = 10} = Astro.props;
 		width: 50vw;
 		z-index: 10;
 	`>
-		<h2 style="color: white; font-size: 1.42em;">{title}</h2>
+		<h2 style="color: white; font-size: 1.42em;">{!!secondTitle ? secondTitle : title}</h2>
 	</div>
 	<slot />
 </Slide>

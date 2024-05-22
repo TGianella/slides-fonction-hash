@@ -2,9 +2,37 @@
 import TitleSlide from "../../components/TitleSlide.astro";
 ---
 
-<TitleSlide title="Le jeu de la vie" spacing={11}>
-	<div class="r-stack">
-		<img class="fragment" src="/public/game_of_life.jpg" width="500"/>
-		<img class="fragment" src="/public/game_of_life.gif" width="500"/>
-	</div>
+<TitleSlide title="Le jeu de la vie" spacing={5}>
+  <div class="flex">
+    <div class="flex-item r-stack">
+      <img src=`${import.meta.env.BASE_URL}/empty_universe.png` class="fragment fade-in-then-out" data-fragment-index="2"/>
+      <img src=`${import.meta.env.BASE_URL}/exemple_1.png` class="fragment fade-in-then-out" data-fragment-index="3"/>
+      <img src=`${import.meta.env.BASE_URL}/exemple_2.png` class="fragment fade-in-then-out" data-fragment-index="4"/>
+      <img src=`${import.meta.env.BASE_URL}/exemple_3.png` class="fragment fade-in-then-out" data-fragment-index="5"/>
+      <img src=`${import.meta.env.BASE_URL}/rules/1-1.png` class="fragment fade-in-then-out" data-fragment-index="6"/>
+      <img src=`${import.meta.env.BASE_URL}/rules/voisins.png` class="fragment fade-in-then-out" data-fragment-index="7"/>
+    </div>
+    <div class="flex-item">
+      <ul style="font-size: 0.7em">
+        <li style="margin: 0 0 10% 0" class="fragment" data-fragment-index="1">Un jeu à 0 joueurs</li>
+        <li style="margin: 10% 0" class="fragment" data-fragment-index="2">Un plateau infini en 2D</li>
+        <li style="margin: 10% 0" class="fragment" data-fragment-index="3">Des cases à l'état binaire</li>
+        <li style="margin: 10% 0" class="fragment" data-fragment-index="4">Une génération = un état du plateau</li>
+				<li style="margin: 10% 0 0 0" class="fragment" data-fragment-index="6">Chaque cellule dépend des 8 voisines</li>
+      </ul>
+    </div>
+  </div>
 </TitleSlide>
+
+<style>
+	.flex {
+		display: flex;
+		gap: 30px;
+		position: relative;
+		top: 20px;
+	}
+
+	.flex-item {
+		flex: 1 1 0;
+	}
+</style>
