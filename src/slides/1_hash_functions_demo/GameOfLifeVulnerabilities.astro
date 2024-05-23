@@ -2,10 +2,20 @@
 import TitleSlide from "../../components/TitleSlide.astro";
 ---
 
-<TitleSlide title="Les vulnérabilités du jeu de la vie">
+<TitleSlide title="Vulnérabilités" spacing={13}>
 	<ul>
-		<li class="fragment">Les collisions</li>
-		<li class="fragment">Les attaques de préimage</li>
-		<li class="fragment">Inversion du hash</li>
+		<li class="fragment">Collisions 💥</li>
+		<li class="fragment">Attaques de préimage 🖼️</li>
+		<li class="fragment">Inversion du hash ↩️</li>
 	</ul>
 </TitleSlide>
+
+<style>
+	li {
+		font-size: 1.5em;
+
+		+ li {
+			margin-top: 30px;
+		}
+	}
+</style>

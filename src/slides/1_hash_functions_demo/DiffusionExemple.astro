@@ -2,15 +2,23 @@
 import TitleSlide from "../../components/TitleSlide.astro";
 ---
 
-<TitleSlide title="Exemples (SHA-256)" spacing={8}>
-	<div class="exemple fragment">
-		<p>"Dessine-moi un mot de passe"</p>
-		<p>&#8594;</p>
-		<p style="word-break: break-word">c183b3095ac69e01c7acbe20ed1e29be3ba9cd019d2c3cb228c2540dc418caa4</p>
-	</div>
-	<div class="exemple fragment">
-		<p>"Dessine-moi un mot de p<strong>b</strong>sse"</p>
-		<p>&#8594;</p>
-		<p style="word-break: break-word">f2e1756cc37813c420204b3e34ec00f3a59acd256931f02a27ed8f8177f88d97</p>
+<TitleSlide oneSlide title="Exemples (MD5)" spacing={11.5}>
+	<div class="slide-wrapper">
+		<div class="exemple fragment">
+			<p>"Zenika"</p>
+			<p>&#8594;</p>
+			<p style="word-break: break-word; width: 25vw">9a3cccd284ee546ad0e4d0e2ab45afc7</p>
+		</div>
+		<div class="exemple fragment">
+			<p>"Zenik<strong>o</strong>"</p>
+			<p>&#8594;</p>
+			<p style="word-break: break-word; width: 25vw">136e4ba562cf7c3351c256677dd8f235</p>
+		</div>
 	</div>
 </TitleSlide>
+
+<style>
+	.slide-wrapper {
+		font-size: 1.2em;
+	}
+</style>

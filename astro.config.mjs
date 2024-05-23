@@ -4,4 +4,7 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	site: "https://tgianella.github.io",
 	base: "/slides-fonction-hash",
+	devToolbar: {
+		enabled: false
+	},
 });

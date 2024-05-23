@@ -1,19 +1,26 @@
 ---
 import TitleSlide from "../../components/TitleSlide.astro";
+import Rules1_1 from "../../assets/rules/1-1.png";
+import Rules1_2 from "../../assets/empty_grid.png";
+import Rules2_1 from "../../assets/rules/2-1.png";
+import Rules3_1 from "../../assets/rules/3-1.png";
+import Rules3_2 from "../../assets/rules/3-2.png";
+import Rules4_1 from "../../assets/rules/4_1.png";
+import Rules4_2 from "../../assets/rules/4_2.png";
 ---
 
 <TitleSlide title="Les 4 règles du jeu de la vie" spacing={5}>
 	<div class="flex">
 		<div class="flex-item r-stack">
-			<img src=`${import.meta.env.BASE_URL}/rules/1-1.png` class="fragment fade-in-then-out" data-fragment-index="1" />
-			<img src=`${import.meta.env.BASE_URL}/rules/1-1.png` class="fragment fade-in-then-out" data-fragment-index="2" />
-			<img src=`${import.meta.env.BASE_URL}/rules/1-2.png` class="fragment fade-in-then-out" data-fragment-index="3" />
-			<img src=`${import.meta.env.BASE_URL}/rules/2-1.png` class="fragment fade-in-then-out" data-fragment-index="4" />
-			<img src=`${import.meta.env.BASE_URL}/rules/2-1.png` class="fragment fade-in-then-out" data-fragment-index="5" />
-			<img src=`${import.meta.env.BASE_URL}/rules/3-1.png` class="fragment fade-in-then-out" data-fragment-index="6" />
-			<img src=`${import.meta.env.BASE_URL}/rules/3-2.png` class="fragment fade-in-then-out" data-fragment-index="7" />
-			<img src=`${import.meta.env.BASE_URL}/rules/4-1.png` class="fragment fade-in-then-out" data-fragment-index="8" />
-			<img src=`${import.meta.env.BASE_URL}/rules/4-2.png` class="fragment fade-in-then-out" data-fragment-index="9" />
+			<img src={Rules1_1.src} class="fragment fade-in-then-out" data-fragment-index="1" />
+			<img src={Rules1_1.src} class="fragment fade-in-then-out" data-fragment-index="2" />
+			<img src={Rules1_2.src} class="fragment fade-in-then-out" data-fragment-index="3" />
+			<img src={Rules2_1.src} class="fragment fade-in-then-out" data-fragment-index="4" />
+			<img src={Rules2_1.src} class="fragment fade-in-then-out" data-fragment-index="5" />
+			<img src={Rules3_1.src} class="fragment fade-in-then-out" data-fragment-index="6" />
+			<img src={Rules3_2.src} class="fragment fade-in-then-out" data-fragment-index="7" />
+			<img src={Rules4_1.src} class="fragment fade-in-then-out" data-fragment-index="8" />
+			<img src={Rules4_2.src} class="fragment fade-in-then-out" data-fragment-index="9" />
 		</div>
 		<div class="flex-item">
 			<ul style="font-size: 0.7em">

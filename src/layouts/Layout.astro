@@ -23,11 +23,19 @@ const { title } = Astro.props;
 			Reveal.initialize({
 				transition: "none",
 				history: true,
-				// progress: false,
-				// controls: false,
+				progress: false,
+				controls: true,
+				controlsBackArrows: 'hidden',
 				autoAnimateDuration: 0.5,
 				autoAnimateEasing: "cubic-bezier(0.4, 0, 0.2, 1)",
 				// plugins: [RevealHighlight], // use this if you want to show some code
+			});
+
+			Reveal.configure({
+				keyboard: {
+					38: 'next',
+					40: 'prev'
+				}
 			});
 		</script>
 	</body>
