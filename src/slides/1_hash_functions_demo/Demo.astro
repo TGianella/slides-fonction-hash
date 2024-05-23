@@ -1,8 +1,18 @@
 ---
 import Slide from "../../components/Slide.astro";
+
+interface Props {
+	withTitle: boolean;
+}
+
+const { withTitle = false } = Astro.props;
 ---
-<Slide>
-	<h2>👨‍🎨 Demo time ! 🎨</h2>
-</Slide>
+
+{!!withTitle ?
+	<Slide>
+		<h2>👨‍🎨 Demo time ! 🎨</h2>
+	</Slide>
+:null}
+
 
 <section data-auto-animate data-background-iframe="http://localhost:5173/LifeHash"></section>

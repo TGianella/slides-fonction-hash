@@ -19,6 +19,16 @@ import Rules from "../slides/intro/Rules.astro";
 import GameOfLifeFullscreen from "../slides/intro/GameOfLifeFullscreen.astro";
 import Dessin from "../slides/intro/Dessin.astro";
 import FunctionPresentation from "../slides/1_hash_functions_demo/FunctionPresentation.astro";
+import Diffusion from "../slides/1_hash_functions_demo/Diffusion.astro";
+import DiffusionExemple from "../slides/1_hash_functions_demo/DiffusionExemple.astro";
+import BiasCharts from "../slides/1_hash_functions_demo/BiasCharts.astro";
+import StillLife from "../slides/1_hash_functions_demo/StillLife.astro";
+import GameOfLifeStillLife from "../slides/1_hash_functions_demo/GameOfLifeStillLife.astro";
+import BiasDiffusionTradeoff from "../slides/1_hash_functions_demo/BiasDiffusionTradeoff.astro";
+import BiasDiffusionTradeoffExemple from "../slides/1_hash_functions_demo/BiasDiffusionTradeoffExemple.astro";
+import GameOfLifeVulnerabilities from "../slides/1_hash_functions_demo/GameOfLifeVulnerabilities.astro";
+import Collisions from "../slides/1_hash_functions_demo/Collisions.astro";
+import Preimage from "../slides/1_hash_functions_demo/Preimage.astro";
 ---
 
 <Layout title="My Awesome Talk Title">
@@ -38,9 +48,20 @@ import FunctionPresentation from "../slides/1_hash_functions_demo/FunctionPresen
 			<GameOfLifeFunction />
 			<Disclaimer />
 			<FunctionPresentation />
-			<Demo />
+			<Demo withTitle/>
 			<DesirableProperties />
 			<Bias />
+			<Diffusion />
+			<DiffusionExemple />
+			<Demo />
+			<BiasCharts />
+			<GameOfLifeStillLife />
+			<BiasDiffusionTradeoff />
+			<BiasDiffusionTradeoffExemple />
+			<GameOfLifeVulnerabilities />
+			<Demo />
+			<Collisions />
+			<Preimage />
       <!-- Put your slides here -->
     </div>
   </main>

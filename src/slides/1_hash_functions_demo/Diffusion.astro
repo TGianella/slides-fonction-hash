@@ -2,8 +2,8 @@
 import TitleSlide from "../../components/TitleSlide.astro";
 ---
 
-<TitleSlide title="La diffusion" spacing={8}>
-	<p>Pour protéger les mots de passe en clair le condensé doit avoir le moins de lien avec</p>
-	<p>Autrement dit, tout changement de l'entrée doit impliquer un changement total de l'output, c'est l'<strong>effet avalanche<strong></strong></p>
-	<p>Concrètement deux entrées très proches doivent donner deux condensés totalement différents</p>
+<TitleSlide title="La diffusion" spacing={6}>
+	<p class="fragment">Objectif : aucune corrélation <strong>apparente</strong> entre le texte en clair et le condensé</p>
+	<p class="fragment">Autrement dit, deux entrées très proches doivent donner deux condensés totalement différents</p>
+	<p class="fragment">Autrement dit, si je change un bit de l'entrée, tous les bits de la sortie doivent avoir une chance sur deux de changer</p>
 </TitleSlide>

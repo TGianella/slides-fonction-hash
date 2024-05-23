@@ -2,18 +2,21 @@
 import Slide from "./Slide.astro";
 
 interface Props {
-	oneSlide: boolean;
+	oneSlide?: boolean;
 	title: string;
-	secondTitle: string;
+	secondTitle?: string;
 	spacing: number;
+	backgroundImage?: string;
 	}
 
-const { title, oneSlide= false, spacing = 10, secondTitle} = Astro.props;
+const { title, oneSlide= false, spacing = 10, secondTitle, backgroundImage} = Astro.props;
+
+const titleColor = !!backgroundImage ? "white" : '';
 ---
 
 {!oneSlide ?
-	<Slide>
-		<h2>{title}</h2>
+	<Slide backgroundImage={backgroundImage}>
+		<h2 style=`color: ${titleColor}`>{title}</h2>
 	</Slide>
 	: null
 }
