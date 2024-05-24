@@ -1,0 +1,31 @@
+---
+import TitleSlide from "../../components/TitleSlide.astro";
+import OwaspLogo from "../../assets/owasp_logo.png";
+import OwaspCheat from "../../assets/owasp-cheat.png"
+---
+
+<TitleSlide title="recommandations" spacing={3}>
+	<div class="r-stack">
+		<img class="fragment fade-in-then-out" src={OwaspLogo.src} />
+		<img class="fragment fade-in-then-out" src={OwaspCheat.src} width="700" />
+		<div class="fragment">
+			<h4>Utilisez des algorithmes modernes</h4>
+			<div class="flex">
+				<span class="fragment">Argon2</span>
+				<span class="fragment">scrypt</span>
+				<span class="fragment">bcrypt</span>
+			</div>
+		</div>
+	</div>
+</TitleSlide>
+
+<style>
+	.flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 1.3em;
+		margin-top: 10vh;
+		font-weight: bold;
+	}
+</style>
