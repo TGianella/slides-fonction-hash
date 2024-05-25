@@ -1,45 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Title from "../slides/intro/Title.astro";
-import Accroche from "../slides/intro/Accroche.astro";
-import HashFunctionsIntro from "../slides/intro/HashFunctionsIntro.astro";
-import HashFunctionsExemple from "../slides/intro/HashFunctionsExemple.astro";
-import IntroGameOfLife from "../slides/intro/IntroGameOfLife.astro";
-import GameOfLifeFunction from "../slides/intro/GameOfLifeFunction.astro";
-import Disclaimer from "../slides/1_hash_functions_demo/Disclaimer.astro";
-import PasswordStorage from "../slides/1_hash_functions_demo/PasswordStorage.astro";
-import EncryptionHashing from "../slides/1_hash_functions_demo/EncryptionHashing.astro";
-import HashSecurity from "../slides/1_hash_functions_demo/HashSecurity.astro";
-import Demo from "../slides/1_hash_functions_demo/Demo.astro";
-import DesirableProperties from "../slides/1_hash_functions_demo/DesirableProperties.astro";
-import Bias from "../slides/1_hash_functions_demo/Bias.astro";
-import WhyHashing from "../slides/intro/WhyHashing.astro";
-import Fingerprinting from "../slides/intro/Fingerprinting.astro";
-import Rules from "../slides/intro/Rules.astro";
-import GameOfLifeFullscreen from "../slides/intro/GameOfLifeFullscreen.astro";
-import Dessin from "../slides/intro/Dessin.astro";
-import FunctionPresentation from "../slides/1_hash_functions_demo/FunctionPresentation.astro";
-import Diffusion from "../slides/1_hash_functions_demo/Diffusion.astro";
-import DiffusionExemple from "../slides/1_hash_functions_demo/DiffusionExemple.astro";
-import BiasCharts from "../slides/1_hash_functions_demo/BiasCharts.astro";
-import StillLife from "../slides/1_hash_functions_demo/StillLife.astro";
-import GameOfLifeStillLife from "../slides/1_hash_functions_demo/GameOfLifeStillLife.astro";
-import BiasDiffusionTradeoff from "../slides/1_hash_functions_demo/BiasDiffusionTradeoff.astro";
-import BiasDiffusionTradeoffExemple from "../slides/1_hash_functions_demo/BiasDiffusionTradeoffExemple.astro";
-import GameOfLifeVulnerabilities from "../slides/1_hash_functions_demo/GameOfLifeVulnerabilities.astro";
-import Collisions from "../slides/1_hash_functions_demo/Collisions.astro";
-import Preimage from "../slides/1_hash_functions_demo/Preimage.astro";
-import GameOfLifeProblem from "../slides/1_hash_functions_demo/GameOfLifeProblem.astro";
-import Eden from "../slides/1_hash_functions_demo/Eden.astro";
-import InjectivityExemple from "../slides/1_hash_functions_demo/InjectivityExemple.astro";
-import GameOfLifeParadox from "../slides/1_hash_functions_demo/GameOfLifeParadox.astro";
-import Final from "../slides/intro/Final.astro";
-import Recommendations from "../slides/1_hash_functions_demo/Recommendations.astro";
+import Title from "../slides/1_intro/Title.astro";
+import Accroche from "../slides/1_intro/Accroche.astro";
+import HashFunctionsIntro from "../slides/1_intro/HashFunctionsIntro.astro";
+import HashFunctionsExemple from "../slides/1_intro/HashFunctionsExemple.astro";
+import IntroGameOfLife from "../slides/1_intro/IntroGameOfLife.astro";
+import GameOfLifeFunction from "../slides/1_intro/GameOfLifeFunction.astro";
+import Disclaimer from "../slides/2_demo/Disclaimer.astro";
+import HashSecurity from "../slides/1_intro/HashSecurity.astro";
+import Demo from "../slides/2_demo/Demo.astro";
+import DesirableProperties from "../slides/3_evaluate_a_hash_function/DesirableProperties.astro";
+import Bias from "../slides/3_evaluate_a_hash_function/Bias.astro";
+import WhyHashing from "../slides/1_intro/WhyHashing.astro";
+import Fingerprinting from "../slides/1_intro/Fingerprinting.astro";
+import Rules from "../slides/1_intro/Rules.astro";
+import GameOfLifeFullscreen from "../slides/1_intro/GameOfLifeFullscreen.astro";
+import Dessin from "../slides/1_intro/Dessin.astro";
+import FunctionPresentation from "../slides/2_demo/FunctionPresentation.astro";
+import Diffusion from "../slides/3_evaluate_a_hash_function/Diffusion.astro";
+import DiffusionExemple from "../slides/1_intro/DiffusionExemple.astro";
+import BiasCharts from "../slides/3_evaluate_a_hash_function/BiasCharts.astro";
+import GameOfLifeStillLife from "../slides/3_evaluate_a_hash_function/GameOfLifeStillLife.astro";
+import BiasDiffusionTradeoff from "../slides/3_evaluate_a_hash_function/BiasDiffusionTradeoff.astro";
+import BiasDiffusionTradeoffExemple from "../slides/3_evaluate_a_hash_function/BiasDiffusionTradeoffExemple.astro";
+import GameOfLifeVulnerabilities from "../slides/4_cracking_hash_function/GameOfLifeVulnerabilities.astro";
+import Collisions from "../slides/4_cracking_hash_function/Collisions.astro";
+import Preimage from "../slides/4_cracking_hash_function/Preimage.astro";
+import GameOfLifeProblem from "../slides/4_cracking_hash_function/GameOfLifeProblem.astro";
+import Eden from "../slides/4_cracking_hash_function/Eden.astro";
+import InjectivityExemple from "../slides/4_cracking_hash_function/InjectivityExemple.astro";
+import GameOfLifeParadox from "../slides/4_cracking_hash_function/GameOfLifeParadox.astro";
+import Final from "../slides/5_outro/Final.astro";
+import Recommendations from "../slides/5_outro/Recommendations.astro";
 ---
 
 <Layout title="My Awesome Talk Title">
   <main class="reveal">
     <div class="slides">
+			<!-- Intro -->
       <Title />
 			<Accroche />
 			<HashFunctionsIntro />
@@ -53,9 +51,11 @@ import Recommendations from "../slides/1_hash_functions_demo/Recommendations.ast
 			<Rules />
 			<GameOfLifeFullscreen />
 			<GameOfLifeFunction />
+			<!-- Demo -->
 			<Disclaimer />
 			<FunctionPresentation />
 			<Demo withTitle/> <!-- General demo -->
+			<!-- How to evaluate a hash function ? -->
 			<DesirableProperties />
 			<Bias />
 			<Diffusion />
@@ -64,6 +64,7 @@ import Recommendations from "../slides/1_hash_functions_demo/Recommendations.ast
 			<GameOfLifeStillLife />
 			<BiasDiffusionTradeoff />
 			<BiasDiffusionTradeoffExemple />
+			<!-- Cracking my hash function -->
 			<GameOfLifeVulnerabilities />
 			<Demo /> <!-- Password collision -->
 			<Collisions />
@@ -72,6 +73,7 @@ import Recommendations from "../slides/1_hash_functions_demo/Recommendations.ast
 			<Eden />
 			<InjectivityExemple />
 			<GameOfLifeParadox />
+			<!-- Outro -->
 			<Disclaimer />
 			<Recommendations />
 			<Final />

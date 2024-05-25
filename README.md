@@ -1,27 +1,14 @@
-# Reveal.js + Astro
+# Dessine-moi un mot de passe ou le hachage cryptographique pour les nuls
 
-Minimalist template for presentations on the web.
+Slides de mon talk sur les fonctions de hachage cryptographiques.
 
-## Usage
+* Appuyez sur flèche gauche pour accéder à la slide suivante, flèche droite pour revenir à la slide précédente. Sur les slides de démo, si vous avez interagi avec la page, il faut cliquer sur la flèche en bas à droite pour pouvoir naviguer à nouveau au clavier.
+* Appuyez sur echap pour passer en vue d'ensemble et naviguer entre les slides.
 
-You have several options to start a new presentation using this template:
+## Avertissement
 
-- Click on the button 'Use this template' above, or
-- Clone the repo : `git clone git@github.com:jsulpis/slides-template.git`, or
-- Use [degit](https://www.npmjs.com/package/degit) (get a copy without cloning): `pnpm dlx degit jsulpis/slides-template my-talk`
+Ces slides sont optimisées pour un ratio 16:9, sur un autre ratio il se peut que des éléments soient mal positionnés (en particulier les titres des slides).
 
-## UI Framework
+## Crédits
 
-For the specific cases where you need one, you can add one of the [frameworks](https://docs.astro.build/en/guides/integrations-guide/) supported by Astro.
-
-For instance:
-
-```
-pnpm astro add svelte
-```
-
-or
-
-```bash
-pnpm astro add react tailwind
-```
+Slides créées à partir du [template reveal + astro](https://github.com/jsulpis/slides-template) de @jsulpis, merci à lui !

@@ -1,0 +1,43 @@
+---
+import TitleSlide from "../../components/TitleSlide.astro";
+import EmptyGrid from "../../assets/grids/empty_grid.png";
+import Exemple1 from "../../assets/grids/exemple1.png";
+import Exemple2 from "../../assets/grids/exemple2.png";
+import Rule1 from "../../assets/rules/1-1.png";
+import Neighbours from "../../assets/rules/neighbours.png";
+---
+
+<TitleSlide title="Le jeu de la vie" spacing={5}>
+  <div class="flex">
+    <div class="flex-item r-stack">
+      <img src={EmptyGrid.src} class="fragment fade-in" data-fragment-index="1"/>
+      <img src={Exemple1.src} class="fragment fade-in-then-out" data-fragment-index="3"/>
+      <img src={Exemple1.src} class="fragment fade-in-then-out" data-fragment-index="4"/>
+      <img src={Exemple2.src} class="fragment fade-in-then-out" data-fragment-index="5"/>
+      <img src={Rule1.src} class="fragment fade-in-then-out" data-fragment-index="6"/>
+      <img src={Neighbours.src} class="fragment fade-in-then-out" data-fragment-index="7"/>
+    </div>
+    <div class="flex-item">
+      <ul style="font-size: 0.7em">
+        <li style="margin: 0 0 10% 0" class="fragment" data-fragment-index="1">Un jeu à 0 joueurs</li>
+        <li style="margin: 10% 0" class="fragment" data-fragment-index="2">Une grille en 2D</li>
+        <li style="margin: 10% 0" class="fragment" data-fragment-index="3">Des cases à l'état binaire</li>
+        <li style="margin: 10% 0" class="fragment" data-fragment-index="4">Une génération = un état de la grille</li>
+				<li style="margin: 10% 0 0 0" class="fragment" data-fragment-index="6">Chaque cellule dépend des 8 voisines</li>
+      </ul>
+    </div>
+  </div>
+</TitleSlide>
+
+<style>
+	.flex {
+		display: flex;
+		gap: 30px;
+		position: relative;
+		top: 20px;
+	}
+
+	.flex-item {
+		flex: 1 1 0;
+	}
+</style>

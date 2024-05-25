@@ -1,0 +1,35 @@
+---
+import TitleSlide from "../../components/TitleSlide.astro";
+import Eden from "../../assets/paintings/eden.jpeg"
+import EdenExemple from "../../assets/Gardenofeden2.png";
+---
+
+<TitleSlide title="Les jardins d'Eden" backgroundImage={Eden.src} spacing={7}>
+	<div class="flex">
+		<img src={EdenExemple.src} width="700" />
+		<ul>
+			<li class="fragment">Une configuration qui n'a pas d'ancêtres</li>
+			<li class="fragment">Aucun état ne peut le produire</li>
+			<li class="fragment">Série de bits impossible à retrouver comme sortie de la fonction</li>
+		</ul>
+	</div>
+
+</TitleSlide>
+
+<style>
+	.flex {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		position: relative;
+		top: 3vh;
+	}
+
+	.flex-item {
+		flex: 1 1 0;
+	}
+
+	li + li {
+		margin-top: 10px;
+	}
+</style>
