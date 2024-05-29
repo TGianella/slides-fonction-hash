@@ -1,3 +1,7 @@
+:root {
+	--background-color: #ffeb03;
+}
+
 .exemple {
 	display: flex;
 	gap: 30px;

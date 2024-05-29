@@ -7,7 +7,7 @@ import HashFunctionsExemple from "../slides/1_intro/HashFunctionsExemple.astro";
 import IntroGameOfLife from "../slides/1_intro/IntroGameOfLife.astro";
 import GameOfLifeFunction from "../slides/1_intro/GameOfLifeFunction.astro";
 import Disclaimer from "../slides/2_demo/Disclaimer.astro";
-import HashSecurity from "../slides/1_intro/HashSecurity.astro";
+import HashBlender from "../slides/1_intro/HashBlender.astro";
 import Demo from "../slides/2_demo/Demo.astro";
 import DesirableProperties from "../slides/3_evaluate_a_hash_function/DesirableProperties.astro";
 import Bias from "../slides/3_evaluate_a_hash_function/Bias.astro";
@@ -41,7 +41,7 @@ import Recommendations from "../slides/5_outro/Recommendations.astro";
       <Title />
 			<Accroche />
 			<HashFunctionsIntro />
-			<HashSecurity />
+			<HashBlender />
 			<HashFunctionsExemple />
 			<DiffusionExemple />
 			<WhyHashing />
@@ -85,6 +85,6 @@ import Recommendations from "../slides/5_outro/Recommendations.astro";
 <style lang="scss">
   // Sass is installed by default, you can change if you prefer Stylus or Less
   main {
-    background: yellow;
+    background: var(--background-color);
   }
 </style>

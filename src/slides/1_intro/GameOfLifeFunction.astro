@@ -1,19 +1,10 @@
 ---
-import Slide from "../../components/Slide.astro";
 import GridStart from "../../assets/hash_function/start.png";
 import GridEnd from "../../assets/hash_function/end.png";
+import TitleSlide from "../../components/TitleSlide.astro";
 ---
 
-<Slide withTitle>
-	<div style="
-		position: relative;
-		top: -9vh;
-		font-family: 'Comic Sans MS';
-		width: 50vw;
-		z-index: 10;
-	">
-		<h2 style="color: white; font-size: 1.42em;">Une fonction de hachage ?</h2>
-	</div>
+<TitleSlide oneSlide title="Une fonction de hachage ?" spacing={9}>
 	<div class="exemple">
 		<img src={GridStart.src} width="350" />
 		<div>
@@ -22,4 +13,4 @@ import GridEnd from "../../assets/hash_function/end.png";
 		</div>
 		<img src={GridEnd.src} width="350" />
 	</div>
-</Slide>
+</TitleSlide>

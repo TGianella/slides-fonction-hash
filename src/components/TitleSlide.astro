@@ -16,19 +16,32 @@ const titleColor = !!backgroundImage ? "white" : '';
 
 {!oneSlide ?
 	<Slide backgroundImage={backgroundImage}>
-		<h2 style=`color: ${titleColor}`>{title}</h2>
+		<h2 class="main-title">{title}</h2>
 	</Slide>
 	: null
 }
 
 <Slide withTitle>
-	<div style=`
-		position: relative;
-		top: -${spacing}vh;
-		width: 50vw;
-		z-index: 10;
-	`>
-		<h2 style="color: white; font-size: 1.42em;">{!!secondTitle ? secondTitle : title}</h2>
+	<div class="title-wrapper">
+		<h2 class="top-title">{!!secondTitle ? secondTitle : title}</h2>
 	</div>
 	<slot />
 </Slide>
+
+<style define:vars={{ spacing, titleColor }}>
+	.title-wrapper {
+		position: relative;
+		bottom: calc(var(--spacing) * 1vh);
+		width: 50vw;
+		z-index: 10;
+	}
+
+	.top-title {
+		color: white;
+		font-size: 1.42em;
+	}
+
+	.main-title {
+		color: var(--titleColor);
+	}
+</style>
