@@ -2,9 +2,22 @@
 import TitleSlide from "../../components/TitleSlide.astro";
 ---
 
-<TitleSlide title="Fonction de hachage ???" spacing={8.5}>
-	<p>Une fonction <strong>déterministe</strong> qui prend une donnée de taille variable en entrée (chaîne de caractères, document, contenu media...) et produit une chaîne de caractères de taille fixe : le <strong>condensé</strong>.</p>
+<TitleSlide title="Fonction de hachage ???" spacing={12}>
+	<div class="exemple">
+		<div class="left">Donnée de taille variable</div>
+		<span>→</span>
+		<div class="right">Condensé de taille fixe</div>
+	</div>
 	<div class="fragment">
 		<p><strong>Déterministe</strong> : le même input donne <strong>toujours</strong> le même output</p>
 	</div>
 </TitleSlide>
+
+<style>
+	.exemple {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 2em;
+	}
+</style>
