@@ -5,9 +5,10 @@ import Exemple1 from "../../assets/grids/exemple1.png";
 import Exemple2 from "../../assets/grids/exemple2.png";
 import Rule1 from "../../assets/rules/1-1.png";
 import Neighbours from "../../assets/rules/neighbours.png";
+import Kandinsky from "../../assets/paintings/kandinsky_full_size.jpeg";
 ---
 
-<TitleSlide title="Le jeu de la vie" spacing={5}>
+<TitleSlide title="Le jeu de la vie" backgroundImage={Kandinsky.src}>
   <div class="flex">
     <div class="flex-item r-stack">
       <img src={EmptyGrid.src} class="fragment fade-in" data-fragment-index="1"/>
@@ -33,8 +34,6 @@ import Neighbours from "../../assets/rules/neighbours.png";
 	.flex {
 		display: flex;
 		gap: 30px;
-		position: relative;
-		top: 20px;
 	}
 
 	.flex-item {

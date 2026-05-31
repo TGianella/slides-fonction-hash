@@ -1,21 +1,14 @@
 ---
-import AppCode from "../../assets/qr_codes/url_github_neutral.png";
-import FeedbackCode from "../../assets/qr_codes/LFT Sept 24 Earth Wind Fire QRCode.png";
+import PersonalSite from "../../assets/qr_codes/url-personal-site.png";
 import Avatar from "../../assets/avatar_pour_les_nuls.png";
 ---
 
 <section>
 	<div class="wrapper">
-		<div class="qr-code-wrapper left">
+		<div class="qr-code-wrapper">
 			<div class="qr-code">
-				<span class="qr-code-label">Application</span>
-				<img src={AppCode.src} width="400" />
-			</div>
-		</div>
-		<div class="qr-code-wrapper right">
-			<div class="qr-code">
-				<span class="qr-code-label">OpenFeedback</span>
-				<img src={FeedbackCode.src} width="400"/>
+				<span class="qr-code-label">Liens utiles</span>
+				<img src={PersonalSite.src} width="400"/>
 			</div>
 		</div>
 	</div>
@@ -42,16 +35,6 @@ import Avatar from "../../assets/avatar_pour_les_nuls.png";
 		width: 15vw;
 	}
 
-	.left {
-		position: relative;
-		left: -5vh;
-	}
-
-	.right {
-		position: relative;
-		right: -5vh;
-	}
-
 	.qr-code-wrapper {
 		display: flex;
 		align-items: center;
@@ -62,7 +45,7 @@ import Avatar from "../../assets/avatar_pour_les_nuls.png";
 		font-size: 0.8em;
 		clip-path: polygon(34% 0, 53% 12%, 71% 0, 70% 17%, 94% 4%, 80% 31%, 100% 25%, 84% 46%, 100% 53%, 84% 62%, 100% 70%, 82% 78%, 90% 96%, 71% 86%, 62% 100%, 52% 88%, 40% 100%, 34% 85%, 9% 96%, 19% 73%, 0 63%, 18% 54%, 0 43%, 19% 33%, 0 10%, 32% 16%);
 		height: 50vh;
-		width: 50vw;
+		width: 25vw;
 	}
 
 	.wrapper {
@@ -70,6 +53,6 @@ import Avatar from "../../assets/avatar_pour_les_nuls.png";
 		top: 7vh;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 	}
 </style>

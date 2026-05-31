@@ -4,7 +4,7 @@ import Eden from "../../assets/paintings/eden.jpeg"
 import EdenExemple from "../../assets/Gardenofeden2.png";
 ---
 
-<TitleSlide title="Les jardins d'Eden" backgroundImage={Eden.src} spacing={7}>
+<TitleSlide title="Les jardins d'Eden" backgroundImage={Eden.src}>
 	<div class="flex">
 		<img src={EdenExemple.src} width="700" />
 		<ul>
@@ -21,8 +21,6 @@ import EdenExemple from "../../assets/Gardenofeden2.png";
 		display: flex;
 		gap: 30px;
 		align-items: center;
-		position: relative;
-		top: 3vh;
 	}
 
 	.flex-item {

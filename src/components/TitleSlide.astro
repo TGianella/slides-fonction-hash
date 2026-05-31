@@ -5,43 +5,45 @@ interface Props {
 	oneSlide?: boolean;
 	title: string;
 	secondTitle?: string;
-	spacing: number;
 	backgroundImage?: string;
-	}
+}
 
-const { title, oneSlide= false, spacing = 10, secondTitle, backgroundImage} = Astro.props;
+const { title, oneSlide = false, secondTitle, backgroundImage } = Astro.props;
 
 const titleColor = !!backgroundImage ? "white" : '';
 ---
 
 {!oneSlide ?
 	<Slide backgroundImage={backgroundImage}>
+		<div class="header-bg-hidden" data-id="header-bg"></div>
 		<h2 class="main-title">{title}</h2>
 	</Slide>
 	: null
 }
 
 <Slide withTitle>
-	<div class="title-wrapper">
-		<h2 class="top-title">{!!secondTitle ? secondTitle : title}</h2>
-	</div>
+	<h2 slot="header" class="top-title">{!!secondTitle ? secondTitle : title}</h2>
 	<slot />
 </Slide>
 
-<style define:vars={{ spacing, titleColor }}>
-	.title-wrapper {
-		position: relative;
-		bottom: calc(var(--spacing) * 1vh);
-		width: 50vw;
-		z-index: 10;
-	}
-
+<style define:vars={{ titleColor }}>
 	.top-title {
 		color: white;
-		font-size: 1.42em;
+		font-size: 1.40em;
 	}
 
 	.main-title {
+		font-size: 1.40em;
 		color: var(--titleColor);
+	}
+
+	.header-bg-hidden {
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 200%;
+		height: 0;
+		background: black;
+		transform: translateY(-100%);
 	}
 </style>

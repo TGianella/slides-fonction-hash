@@ -6,8 +6,8 @@ interface Props {
    * default: true
    */
   animate?: boolean;
-	withTitle?: string;
-	withSubtitle?: string;
+	withTitle?: boolean;
+	withSubtitle?: boolean;
 	backgroundImage?: string;
 }
 
@@ -17,10 +17,63 @@ const { animate = true, withTitle = false, withSubtitle = false, backgroundImage
 <section
 	data-auto-animate={animate}
 	data-background-image={backgroundImage}
-	data-background-gradient={
-		withTitle && withSubtitle ? "linear-gradient(178deg, black, black 40%, #ffeb03 40%, #ffeb03)" :
-			withTitle ? "linear-gradient(178deg, black, black 22%, #ffeb03 22%, #ffeb03)" : ''
-	}
+	data-background-color={withTitle ? "#ffeb03" : undefined}
+	class:list={[{ 'has-header': withTitle }]}
 >
-  <slot />
+	{withTitle && (
+		<div class:list={['slide-header', { 'slide-header--tall': withSubtitle }]}>
+			<div class="slide-header-bg" data-id="header-bg"></div>
+			<slot name="header" />
+		</div>
+	)}
+	{withTitle ? (
+		<div class="slide-content">
+			<slot />
+		</div>
+	) : (
+		<slot />
+	)}
 </section>
+
+<style>
+	.has-header {
+		display: flex !important;
+		flex-direction: column;
+		align-items: stretch !important;
+		height: 100%;
+		padding: 0 !important;
+		overflow: visible;
+	}
+
+	.slide-header {
+		flex-shrink: 0;
+		padding: 1em 50%;
+		margin: -30px -50% 0;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		z-index: 1;
+		position: relative;
+	}
+
+	.slide-header-bg {
+		position: absolute;
+		inset: 0;
+		background: black;
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1em), 0 100%);
+		z-index: -1;
+	}
+
+	.slide-header--tall {
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+
+	.slide-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0.5em 0;
+	}
+</style>
